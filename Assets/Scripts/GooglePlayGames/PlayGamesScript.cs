@@ -1,16 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using GooglePlayGames;
+using GooglePlayGames.BasicApi;
 using UnityEngine;
 
-public class PlayGamesScript : MonoBehaviour {
+public class PlayGamesScript : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Start()
+    {
+        PlayGamesClientConfiguration gamesClientConfiguration = new PlayGamesClientConfiguration.Builder()
+            .EnableSavedGames()
+            .Build();
+        PlayGamesPlatform.InitializeInstance(gamesClientConfiguration);
+        PlayGamesPlatform.DebugLogEnabled = true;
+        PlayGamesPlatform.Activate();
+
+        SignIn();
+    }
+
+    void SignIn()
+    {
+        Social.localUser.Authenticate((bool success) => {});
+    }
+
+    #region Leaderboard
+
+    public static void RegisterLeaderboardScore(string idLeaderboard, long score)
+    {
+        Social.ReportScore(score, idLeaderboard, sucess => { });
+    }
+
+    public static void ShowLeaderboardUi(string idLeaderboard)
+    {
+        PlayGamesPlatform.Instance.ShowLeaderboardUI(idLeaderboard);
+    }
+
+    #endregion
+
 }
