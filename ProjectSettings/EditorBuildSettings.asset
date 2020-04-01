@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 611ebdc465637a54183c474bbe9ea877
+  - enabled: 1
+    path: Assets/Scenes/EpisodesScene.unity
+    guid: 39d11aa24d4100e44b99e272b5f003f8
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene1.unity
+    guid: 513c110e0fbb12b459fb91963a8c8e97
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene2.unity
+    guid: e1c1b8f2e41e45d49906e04c2715f033
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene3.unity
+    guid: 4952800dd391dc9458b8f7537dc2d7e1
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene4.unity
+    guid: 6140068a710851d4ab099d9731b91f3b
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene5.unity
+    guid: 11487130b2058c74c8beff233bc8c81c
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene6.unity
+    guid: 44f474da116762f428a0c1de3e082451
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene7.unity
+    guid: 526195ebc3014114f85aee86c23b6b57
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene8.unity
+    guid: 2c676fe9ffff02a4c9962e586800a9c4
+  - enabled: 1
+    path: Assets/Scenes/EpisodeScene9.unity
+    guid: af01e5070be31ea40a1328f14b5da873
+  m_configObjects: {}
