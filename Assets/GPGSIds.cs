@@ -24,7 +24,15 @@
 
 public static class GPGSIds
 {
-        public const string leaderboard_leaderboard = "CgkIxLKf_PIBEAIQAA"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_1 = "CgkIxLKf_PIBEAIQAA"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_2 = "CgkIxLKf_PIBEAIQAg"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_3 = "CgkIxLKf_PIBEAIQAw"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_4 = "CgkIxLKf_PIBEAIQBA"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_5 = "CgkIxLKf_PIBEAIQBQ"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_6 = "CgkIxLKf_PIBEAIQBg"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_7 = "CgkIxLKf_PIBEAIQBw"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_8 = "CgkIxLKf_PIBEAIQCA"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_9 = "CgkIxLKf_PIBEAIQCQ"; // <GPGSID>
 
 }
 

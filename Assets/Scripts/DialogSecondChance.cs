@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +10,10 @@ public class DialogSecondChance : MonoBehaviour {
 
     public Slider loadingProgressSlider;
     public GameObject loadingScreen;
+
+    public int Score;
+
+    public int CurrentEpisode;
 
     void OnEnable()
     {
@@ -44,6 +46,7 @@ public class DialogSecondChance : MonoBehaviour {
 
     public void OpenHome()
     {
+        RegisterScoreForEpisode();
         gameGrid.UnsubscribeEvent();
         ScenesHelper.ClearParameters();
         loadingScreen.SetActive(true);
@@ -52,6 +55,7 @@ public class DialogSecondChance : MonoBehaviour {
 
     public void OpenEpisodes()
     {
+        RegisterScoreForEpisode();
         gameGrid.UnsubscribeEvent();
         ScenesHelper.ClearParameters();
         loadingScreen.SetActive(true);
@@ -73,6 +77,15 @@ public class DialogSecondChance : MonoBehaviour {
             }
 
             yield return null;
+        }
+    }
+
+    private void RegisterScoreForEpisode()
+    {
+        string leaderboardId = LeaderboardHelper.GetLeaderboardIdForEpisode(CurrentEpisode);
+        if (!string.IsNullOrEmpty(leaderboardId))
+        {
+            PlayGamesScript.RegisterLeaderboardScore(leaderboardId, Score);
         }
     }
 }

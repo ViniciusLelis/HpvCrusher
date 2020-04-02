@@ -22,6 +22,11 @@ public class PlayGamesScript : MonoBehaviour
         Social.localUser.Authenticate((bool success) => {});
     }
 
+    string GetPlayerGameId()
+    {
+        return ((PlayGamesLocalUser)Social.localUser).gameId;
+    }
+
     #region Leaderboard
 
     public static void RegisterLeaderboardScore(string idLeaderboard, long score)

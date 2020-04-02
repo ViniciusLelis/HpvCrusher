@@ -28,7 +28,6 @@ C:\Users\vinic\Documents\HPVCrusherPrototype\obj\Debug\Assembly-CSharp.csproj.Co
 C:\Users\vinic\Documents\HPVCrusherPrototype\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\vinic\Documents\HPVCrusherPrototype\obj\Debug\Assembly-CSharp.dll
 C:\Users\vinic\Documents\HPVCrusherPrototype\obj\Debug\Assembly-CSharp.pdb
-C:\Users\vinic\Documents\HPVCrusherPrototype\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
 C:\Users\vinic\Documents\HPVCrusherPrototype\Temp\bin\Debug\Boo.Lang.dll
 C:\Users\vinic\Documents\HPVCrusherPrototype\Temp\bin\Debug\Facebook.Unity.Settings.dll
 C:\Users\vinic\Documents\HPVCrusherPrototype\Temp\bin\Debug\mscorlib.dll

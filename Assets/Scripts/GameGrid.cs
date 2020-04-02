@@ -371,6 +371,7 @@ public class GameGrid : MonoBehaviour
         }
         else
         {
+            levelFailDialog.Score = currentScore;
             levelFailDialog.gameObject.SetActive(true);
         }
         isFinished = true;

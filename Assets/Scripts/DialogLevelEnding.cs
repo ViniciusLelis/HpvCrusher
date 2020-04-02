@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,8 +20,11 @@ public class DialogLevelEnding : MonoBehaviour
     public Slider loadingProgressSlider;
     public GameObject loadingScreen;
 
+    public int CurrentEpisode;
+
     void OnEnable()
     {
+        RegisterScoreForEpisode();
         foreach (Button button in buttonsToDisable)
             button.enabled = false;
     }
@@ -103,5 +105,13 @@ public class DialogLevelEnding : MonoBehaviour
         }
     }
 
+    private void RegisterScoreForEpisode()
+    {
+        string leaderboardId = LeaderboardHelper.GetLeaderboardIdForEpisode(CurrentEpisode);
+        if (!string.IsNullOrEmpty(leaderboardId))
+        {
+            PlayGamesScript.RegisterLeaderboardScore(leaderboardId, Score);
+        }
+    }
 
 }

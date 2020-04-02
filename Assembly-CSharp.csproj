@@ -136,6 +136,7 @@
     <Compile Include="Assets\Scripts\EpisodesFileHandler.cs" />
     <Compile Include="Assets\Scripts\EpisodesMenu.cs" />
     <Compile Include="Assets\Scripts\GameGrid.cs" />
+    <Compile Include="Assets\Scripts\GooglePlayGames\LeaderboardHelper.cs" />
     <Compile Include="Assets\Scripts\GooglePlayGames\PlayGamesScript.cs" />
     <Compile Include="Assets\Scripts\GridItem.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
