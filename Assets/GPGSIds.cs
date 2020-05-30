@@ -24,6 +24,8 @@
 
 public static class GPGSIds
 {
+        public const string leaderboard_leaderboard_episode_15 = "CgkIxLKf_PIBEAIQDw"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_16 = "CgkIxLKf_PIBEAIQEA"; // <GPGSID>
         public const string leaderboard_leaderboard_episode_1 = "CgkIxLKf_PIBEAIQAA"; // <GPGSID>
         public const string leaderboard_leaderboard_episode_2 = "CgkIxLKf_PIBEAIQAg"; // <GPGSID>
         public const string leaderboard_leaderboard_episode_3 = "CgkIxLKf_PIBEAIQAw"; // <GPGSID>
@@ -33,6 +35,11 @@ public static class GPGSIds
         public const string leaderboard_leaderboard_episode_7 = "CgkIxLKf_PIBEAIQBw"; // <GPGSID>
         public const string leaderboard_leaderboard_episode_8 = "CgkIxLKf_PIBEAIQCA"; // <GPGSID>
         public const string leaderboard_leaderboard_episode_9 = "CgkIxLKf_PIBEAIQCQ"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_10 = "CgkIxLKf_PIBEAIQCg"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_11 = "CgkIxLKf_PIBEAIQCw"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_12 = "CgkIxLKf_PIBEAIQDA"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_13 = "CgkIxLKf_PIBEAIQDQ"; // <GPGSID>
+        public const string leaderboard_leaderboard_episode_14 = "CgkIxLKf_PIBEAIQDg"; // <GPGSID>
 
 }
 

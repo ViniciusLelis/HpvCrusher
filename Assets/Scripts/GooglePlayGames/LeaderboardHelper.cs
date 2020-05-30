@@ -13,6 +13,13 @@ public class LeaderboardHelper
         {7, GPGSIds.leaderboard_leaderboard_episode_7},
         {8, GPGSIds.leaderboard_leaderboard_episode_8},
         {9, GPGSIds.leaderboard_leaderboard_episode_9},
+        {10, GPGSIds.leaderboard_leaderboard_episode_10},
+        {11, GPGSIds.leaderboard_leaderboard_episode_11},
+        {12, GPGSIds.leaderboard_leaderboard_episode_12},
+        {13, GPGSIds.leaderboard_leaderboard_episode_13},
+        {14, GPGSIds.leaderboard_leaderboard_episode_14},
+        {15, GPGSIds.leaderboard_leaderboard_episode_15},
+        {16, GPGSIds.leaderboard_leaderboard_episode_16}
     };
 
     public static string GetLeaderboardIdForEpisode(int episodeNumber)
