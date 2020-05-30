@@ -28,8 +28,11 @@ public class DialogLevelEnding : MonoBehaviour
         if (LevelCompleted)
         {
             RegisterScoreForEpisode();
-            SaveVariables.MaximumLevelUnlocked = CurrentEpisode + 1;
-            PlayGamesScript.Instance.SaveData();
+            if (SaveVariables.MaximumLevelUnlocked < CurrentEpisode + 1)
+            {
+                SaveVariables.MaximumLevelUnlocked = CurrentEpisode + 1;
+                PlayGamesScript.Instance.SaveData();
+            }
         }
         foreach (Button button in buttonsToDisable)
         {
