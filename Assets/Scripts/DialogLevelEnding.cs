@@ -28,7 +28,7 @@ public class DialogLevelEnding : MonoBehaviour
         if (LevelCompleted)
         {
             RegisterScoreForEpisode();
-            if (SaveVariables.MaximumLevelUnlocked < CurrentEpisode + 1)
+            if (SaveVariables.MaximumLevelUnlocked < CurrentEpisode + 1 && CurrentEpisode + 1 < 17)
             {
                 SaveVariables.MaximumLevelUnlocked = CurrentEpisode + 1;
                 PlayGamesScript.Instance.SaveData();

@@ -170,3 +170,4 @@ C:\Users\vinic\Documents\HPVCrusherPrototype\Temp\bin\Debug\UnityEngine.XRModule
 C:\Users\vinic\Documents\HPVCrusherPrototype\Temp\bin\Debug\Vuforia.UnityExtensions.xml
 C:\Users\vinic\Documents\HPVCrusherPrototype\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.dll
 C:\Users\vinic\Documents\HPVCrusherPrototype\Temp\bin\Debug\UnityEngine.SpatialTrackingModule.xml
+C:\Users\vinic\Documents\HPVCrusherPrototype\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache

@@ -13,6 +13,13 @@ Assets/Scenes/EpisodeScene6.unity
 Assets/Scenes/EpisodeScene7.unity
 Assets/Scenes/EpisodeScene8.unity
 Assets/Scenes/EpisodeScene9.unity
+Assets/Scenes/EpisodeScene10.unity
+Assets/Scenes/EpisodeScene11.unity
+Assets/Scenes/EpisodeScene12.unity
+Assets/Scenes/EpisodeScene13.unity
+Assets/Scenes/EpisodeScene14.unity
+Assets/Scenes/EpisodeScene15.unity
+Assets/Scenes/EpisodeScene16.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
