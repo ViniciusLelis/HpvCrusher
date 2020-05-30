@@ -3,7 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class DialogSecondChance : MonoBehaviour {
+public class DialogSecondChance : MonoBehaviour
+{
 
     public Button[] buttonsToDisable;
     public GameGrid gameGrid;

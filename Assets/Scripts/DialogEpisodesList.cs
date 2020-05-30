@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogEpisodesList : MonoBehaviour
 {
-
-    private int lastUnlockedLevel = 9;
+    
     private int currentButtonIndex = 1;
     private int currentPage = 0;
     public Button[] episodesButton;
@@ -37,7 +34,7 @@ public class DialogEpisodesList : MonoBehaviour
                 episodesButton[i].onClick.RemoveAllListeners();
                 episodesButton[i].onClick.AddListener(() => PreviousPage());
             }
-            else if (currentButtonIndex > lastUnlockedLevel)
+            else if (currentButtonIndex > SaveVariables.MaximumLevelUnlocked)
             {
                 buttonNumberText.gameObject.SetActive(false);
                 imageComponent.sprite = lockedEpisodeSprite;
@@ -71,7 +68,7 @@ public class DialogEpisodesList : MonoBehaviour
         {
             TMP_Text buttonNumberText = episodesButton[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>();
             Image imageComponent = episodesButton[i].GetComponent<Image>();
-            if (currentButtonIndex > lastUnlockedLevel)
+            if (currentButtonIndex > SaveVariables.MaximumLevelUnlocked)
             {
                 buttonNumberText.gameObject.SetActive(false);
                 imageComponent.sprite = lockedEpisodeSprite;

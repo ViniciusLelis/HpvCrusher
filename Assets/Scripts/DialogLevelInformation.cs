@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogLevelInformation : MonoBehaviour {
+public class DialogLevelInformation : MonoBehaviour
+{
 
     public Button[] buttonsToDisable;
     public int CurrentEpisode;
@@ -9,13 +10,17 @@ public class DialogLevelInformation : MonoBehaviour {
     void OnEnable()
     {
         foreach (Button button in buttonsToDisable)
+        {
             button.enabled = false;
+        }
     }
 
     void OnDisable()
     {
         foreach (Button button in buttonsToDisable)
+        {
             button.enabled = true;
+        }
     }
 
     public void OpenWebsite()

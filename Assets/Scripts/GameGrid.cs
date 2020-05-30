@@ -364,6 +364,7 @@ public class GameGrid : MonoBehaviour
     {
         if (currentScore >= requiredScore)
         {
+            levelCompleteDialog.LevelCompleted = true;
             levelCompleteDialog.Stars = this.stars;
             levelCompleteDialog.Score = currentScore;
             levelCompleteDialog.UpdateInformation();

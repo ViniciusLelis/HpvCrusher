@@ -21,18 +21,28 @@ public class DialogLevelEnding : MonoBehaviour
     public GameObject loadingScreen;
 
     public int CurrentEpisode;
+    public bool LevelCompleted { get; set; }
 
     void OnEnable()
     {
-        RegisterScoreForEpisode();
+        if (LevelCompleted)
+        {
+            RegisterScoreForEpisode();
+            SaveVariables.MaximumLevelUnlocked = CurrentEpisode + 1;
+            PlayGamesScript.Instance.SaveData();
+        }
         foreach (Button button in buttonsToDisable)
+        {
             button.enabled = false;
+        }
     }
 
     void OnDisable()
     {
         foreach (Button button in buttonsToDisable)
+        {
             button.enabled = true;
+        }
     }
 
     public void UpdateInformation()
@@ -73,7 +83,7 @@ public class DialogLevelEnding : MonoBehaviour
         int t = (int)(ScenesHelper.GetParameter("episodeNumber"));
         ScenesHelper.ClearParameters();
         loadingScreen.SetActive(true);
-        ScenesHelper.SetParameter("episodeNumber", t+1);
+        ScenesHelper.SetParameter("episodeNumber", t + 1);
         StartCoroutine(LoadNewScene("EpisodeScene" + (t + 1)));
     }
 
