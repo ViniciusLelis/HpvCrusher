@@ -25,6 +25,9 @@ public class DialogLevelEnding : MonoBehaviour
 
     void OnEnable()
     {
+        var gameGridLocation = gameGrid.transform.position;
+        gameGrid.transform.position = new Vector3(gameGridLocation.x, gameGridLocation.y, -1000.0f);
+
         if (LevelCompleted)
         {
             RegisterScoreForEpisode();
@@ -42,6 +45,9 @@ public class DialogLevelEnding : MonoBehaviour
 
     void OnDisable()
     {
+        var gameGridLocation = gameGrid.transform.position;
+        gameGrid.transform.position = new Vector3(gameGridLocation.x, gameGridLocation.y, 0.0f);
+
         foreach (Button button in buttonsToDisable)
         {
             button.enabled = true;
