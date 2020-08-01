@@ -27,6 +27,8 @@ public class GameGrid : MonoBehaviour
     public DialogLevelEnding levelCompleteDialog;
     public DialogLevelEnding levelFailDialog;
     public GameObject canvasItems;
+    public GameObject _boardBackgroundSquare;
+    public List<GameObject> BackgroundCheckboardElements { get; private set; }
 
     /* Board Level Information */
     private int currentScore;
@@ -48,6 +50,7 @@ public class GameGrid : MonoBehaviour
         timeElapsedSlider.value = maximumTime;
         UpdateScore(0);
         GetItems();
+        FillBoardBackground();
         FillGrid();
         GridItem.OnMouseOverItemEventHandler += OnMouseOverItem;
         isUpdating = false;
@@ -128,6 +131,7 @@ public class GameGrid : MonoBehaviour
     {
         var _viruses = Resources.LoadAll<GameObject>("Prefabs/Viruses");
         var _powerUps = Resources.LoadAll<GameObject>("Prefabs/PowerUps");
+        _boardBackgroundSquare = Resources.Load<GameObject>("Prefabs/UI/BackgroundElement");
         List<GameObject> itemsAux = new List<GameObject>();
         itemsAux.AddRange(_viruses);
         itemsAux.AddRange(_powerUps);
@@ -137,6 +141,19 @@ public class GameGrid : MonoBehaviour
         {
             item.GetComponent<GridItem>().ItemType = i;
             i++;
+        }
+    }
+
+    void FillBoardBackground()
+    {
+        BackgroundCheckboardElements = new List<GameObject>();
+        for (int i = 0; i < this.MDimension; i++)
+        {
+            for (int j = 0; j < this.NDimension; j++)
+            {
+                var boardBackgroundElement = Instantiate(_boardBackgroundSquare, new Vector3(i * 1.1f, (j * 1.1f) - 3f, 89), Quaternion.identity, this.canvasItems.transform) as GameObject;
+                BackgroundCheckboardElements.Add(boardBackgroundElement);
+            }
         }
     }
 
@@ -372,6 +389,7 @@ public class GameGrid : MonoBehaviour
         }
         else
         {
+            levelFailDialog.IsFailDialog = true;
             levelFailDialog.Score = currentScore;
             levelFailDialog.gameObject.SetActive(true);
         }

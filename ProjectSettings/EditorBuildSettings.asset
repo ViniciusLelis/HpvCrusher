@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EpisodeScene16.unity
     guid: c2c84bd58a016c644911ca30ef73b552
+  - enabled: 0
+    path: Assets/Scenes/EpisodeScene1 - Copia.unity
+    guid: 0a0ec79b7eca1c046afd04a2b481b6a8
   m_configObjects: {}

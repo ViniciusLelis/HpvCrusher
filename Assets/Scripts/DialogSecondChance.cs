@@ -18,20 +18,35 @@ public class DialogSecondChance : MonoBehaviour
 
     void OnEnable()
     {
-        var gameGridLocation = gameGrid.transform.position;
-        gameGrid.transform.position = new Vector3(gameGridLocation.x, gameGridLocation.y, -1000.0f);
+        ShowOrHideGrid(false);
 
         foreach (Button button in buttonsToDisable)
+        {
             button.enabled = false;
+        }
     }
 
     void OnDisable()
     {
-        var gameGridLocation = gameGrid.transform.position;
-        gameGrid.transform.position = new Vector3(gameGridLocation.x, gameGridLocation.y, 0.0f);
+        ShowOrHideGrid(true);
 
         foreach (Button button in buttonsToDisable)
+        {
             button.enabled = true;
+        }
+    }
+
+    void ShowOrHideGrid(bool showGrid)
+    {
+        if (gameGrid != null && gameGrid.isActiveAndEnabled)
+        {
+            gameGrid.BackgroundCheckboardElements.ForEach(backGroudElement =>
+            {
+                backGroudElement.SetActive(showGrid);
+            });
+            var gameGridLocation = gameGrid.transform.position;
+            gameGrid.transform.position = new Vector3(gameGridLocation.x, gameGridLocation.y, showGrid ? 0.0f : -1000.0f);
+        }
     }
 
     public void CorrectChoiceSecondChance()

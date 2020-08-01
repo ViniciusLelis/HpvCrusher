@@ -22,11 +22,11 @@ public class DialogLevelEnding : MonoBehaviour
 
     public int CurrentEpisode;
     public bool LevelCompleted { get; set; }
+    public bool IsFailDialog { get; set; }
 
     void OnEnable()
     {
-        var gameGridLocation = gameGrid.transform.position;
-        gameGrid.transform.position = new Vector3(gameGridLocation.x, gameGridLocation.y, -1000.0f);
+        ShowOrHideGrid(false);
 
         if (LevelCompleted)
         {
@@ -45,12 +45,27 @@ public class DialogLevelEnding : MonoBehaviour
 
     void OnDisable()
     {
-        var gameGridLocation = gameGrid.transform.position;
-        gameGrid.transform.position = new Vector3(gameGridLocation.x, gameGridLocation.y, 0.0f);
+        if (!IsFailDialog)
+        {
+            ShowOrHideGrid(true);
+        }
 
         foreach (Button button in buttonsToDisable)
         {
             button.enabled = true;
+        }
+    }
+
+    void ShowOrHideGrid(bool showGrid)
+    {
+        if (gameGrid != null && gameGrid.isActiveAndEnabled)
+        {
+            gameGrid.BackgroundCheckboardElements.ForEach(backGroudElement =>
+            {
+                backGroudElement.SetActive(showGrid);
+            });
+            var gameGridLocation = gameGrid.transform.position;
+            gameGrid.transform.position = new Vector3(gameGridLocation.x, gameGridLocation.y, showGrid ? 0.0f : -1000.0f);
         }
     }
 
