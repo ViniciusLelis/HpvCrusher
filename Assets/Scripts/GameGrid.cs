@@ -199,12 +199,12 @@ public class GameGrid : MonoBehaviour
                 this.firstStar.sprite = filledStar;
                 stars = 1;
             }
-            else if (this.currentScore >= requiredScore * 1.5 && this.secondStar.sprite != filledStar) // If the played achieved 66% above the required score
+            else if (this.currentScore >= requiredScore * 1.25 && this.secondStar.sprite != filledStar) // If the played achieved 66% above the required score
             {
                 this.secondStar.sprite = filledStar;
                 stars = 2;
             }
-            else if (this.currentScore >= requiredScore * 2 && this.thirdStar.sprite != filledStar) // If the played achieved 100% above the required score
+            else if (this.currentScore >= requiredScore * 1.5 && this.thirdStar.sprite != filledStar) // If the played achieved 100% above the required score
             {
                 this.thirdStar.sprite = filledStar;
                 stars = 3;
